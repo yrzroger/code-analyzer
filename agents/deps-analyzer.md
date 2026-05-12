@@ -209,6 +209,7 @@ find . -type d -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*
 - [ ] 文档遵循模板结构
 - [ ] 文档中包含文件路径
 - [ ] 返回确认信息（而非文档内容）
+
 </success_criteria>
 
 <forbidden_files>
@@ -229,6 +230,7 @@ find . -type d -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*
 - 只记录它们的存在: "`.env` 文件存在 - 包含环境配置"
 - 切勿引用其内容，即使部分内容也不行
 - 切勿在输出中包含类似 `API_KEY=...` 或 `sk-...` 的值
+
 </forbidden_files>
 
 <critical_rules>

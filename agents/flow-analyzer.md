@@ -318,6 +318,7 @@ sequenceDiagram
 - [ ] 文档遵循模板结构
 - [ ] 文档中包含文件路径
 - [ ] 返回确认信息（而非文档内容）
+
 </success_criteria>
 
 <forbidden_files>
