@@ -6,16 +6,18 @@ Claude Code 插件，使用 6 个并行 agent 分析代码库，生成 10 个结
 
 自动分析目标代码库，输出以下文档到 `.output/` 目录：
 
-1. **STACK.md** - 技术栈（语言、框架、依赖）
-2. **INTEGRATIONS.md** - 外部集成（API、数据库、服务）
-3. **ARCHITECTURE.md** - 架构模式
-4. **STRUCTURE.md** - 代码结构
-5. **CONVENTIONS.md** - 编码规范
-6. **TESTING.md** - 测试模式
-7. **CONCERNS.md** - 问题与风险
-8. **DEPENDENCIES.md** - 代码依赖
-9. **DATA-FLOW.md** - 数据流
-10. **FLOWCHARTS.md** - 流程图 (Mermaid)
+| # | 文档 | 说明 |
+|:--:|------|------|
+| 1 | **STACK.md** | 技术栈（语言、框架、依赖） |
+| 2 | **INTEGRATIONS.md** | 外部集成（API、数据库、服务） |
+| 3 | **ARCHITECTURE.md** | 架构模式 |
+| 4 | **STRUCTURE.md** | 代码结构 |
+| 5 | **CONVENTIONS.md** | 编码规范 |
+| 6 | **TESTING.md** | 测试模式 |
+| 7 | **CONCERNS.md** | 问题与风险 |
+| 8 | **DEPENDENCIES.md** | 代码依赖 |
+| 9 | **DATA-FLOW.md** | 数据流 |
+| 10 | **FLOWCHARTS.md** | 流程图 (Mermaid) |
 
 ## Agent 组件
 
