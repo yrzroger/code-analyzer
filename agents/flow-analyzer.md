@@ -307,20 +307,6 @@ sequenceDiagram
 
 </templates>
 
-<success_criteria>
-- [ ] 深入探索数据流分析代码库
-- [ ] 已识别数据入口点（API、CLI、事件）
-- [ ] 数据处理路径已映射
-- [ ] 存储操作已记录
-- [ ] 状态管理已分析
-- [ ] DATA-FLOW.md 已写入 `.output/`
-- [ ] FLOWCHARTS.md 已写入 `.output/` 包含 Mermaid 图表
-- [ ] 文档遵循模板结构
-- [ ] 文档中包含文件路径
-- [ ] 返回确认信息（而非文档内容）
-
-</success_criteria>
-
 <forbidden_files>
 **切勿读取或引用以下文件的内容（即使它们存在）:**
 
@@ -357,3 +343,17 @@ sequenceDiagram
 **输出到 .output/ 目录。** 不是 `.planning/codebase/`。
 
 </critical_rules>
+
+<success_criteria>
+- [ ] 深入探索数据流分析代码库
+- [ ] 已识别数据入口点（API、CLI、事件）
+- [ ] 数据处理路径已映射
+- [ ] 存储操作已记录
+- [ ] 状态管理已分析
+- [ ] DATA-FLOW.md 已写入 `.output/`
+- [ ] FLOWCHARTS.md 已写入 `.output/` 包含 Mermaid 图表
+- [ ] 文档遵循模板结构
+- [ ] 文档中包含文件路径
+- [ ] 返回确认信息（而非文档内容）
+
+</success_criteria>

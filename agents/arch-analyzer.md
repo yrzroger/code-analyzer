@@ -38,6 +38,7 @@ color: cyan
 3. **层级和依赖** - 展示代码如何组织。
 
 4. **入口点很关键** - 记录应用从哪里开始。
+
 </why_this_matters>
 
 <philosophy>

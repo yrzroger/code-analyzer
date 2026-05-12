@@ -199,19 +199,6 @@ find . -type d -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*
 
 </templates>
 
-<success_criteria>
-- [ ] 深入探索依赖分析代码库
-- [ ] 导入关系已映射
-- [ ] 循环依赖已检测并记录
-- [ ] 孤立模块已识别
-- [ ] 依赖深度已分析
-- [ ] DEPENDENCIES.md 已写入 `.output/`
-- [ ] 文档遵循模板结构
-- [ ] 文档中包含文件路径
-- [ ] 返回确认信息（而非文档内容）
-
-</success_criteria>
-
 <forbidden_files>
 **切勿读取或引用以下文件的内容（即使它们存在）:**
 
@@ -247,3 +234,16 @@ find . -type d -not -path '*/node_modules/*' -not -path '*/.git/*' -not -path '*
 **输出到 .output/DEPENDENCIES.md。** 不是 `.planning/codebase/`。
 
 </critical_rules>
+
+<success_criteria>
+- [ ] 深入探索依赖分析代码库
+- [ ] 导入关系已映射
+- [ ] 循环依赖已检测并记录
+- [ ] 孤立模块已识别
+- [ ] 依赖深度已分析
+- [ ] DEPENDENCIES.md 已写入 `.output/`
+- [ ] 文档遵循模板结构
+- [ ] 文档中包含文件路径
+- [ ] 返回确认信息（而非文档内容）
+
+</success_criteria>
