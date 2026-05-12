@@ -1,12 +1,10 @@
 {
   "name": "code-analyzer",
-  "description": "并行分析代码库的技术栈、架构、流程等，生成 10 个结构化文档到 .output/ 目录",
+  "description": "Analyze codebase with parallel agents to produce .output/ documents",
   "version": "1.0.0",
   "author": {
-    "name": "yrzroger",
-    "email": "yuruzhi@foxmail.com"
+    "name": "yrzroger"
   },
-  "homepage": "https://github.com/yrzroger/code-analyzer",
   "repository": "https://github.com/yrzroger/code-analyzer",
   "license": "MIT",
   "keywords": [
@@ -14,5 +12,6 @@
     "architecture",
     "documentation",
     "codebase-mapping"
-  ]
+  ],
+  "skills": ["./skills/code-analyzer"]
 }
