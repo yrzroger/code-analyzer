@@ -1,7 +1,7 @@
 ---
 name: code-analyzer
-description: "分析代码库的技术架构、技术栈、代码结构、流程等，输出 10 个结构化文档"
-argument-hint: "[optional: 要分析的代码库路径，默认当前目录]"
+description: "Analyze codebase with parallel agents to produce .output/ documents"
+argument-hint: "[optional: path to codebase, default is the current directory]"
 allowed-tools:
   - Read
   - Bash
