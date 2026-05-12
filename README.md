@@ -58,7 +58,9 @@ graph TD
 ## 安装
 
 ```bash
-claude plugin install ./code-analyzer
+/plugin marketplace add yrzroger/code-analyzer
+/plugin install ./code-analyzer
+/reload-plugins
 ```
 
 ## 使用
