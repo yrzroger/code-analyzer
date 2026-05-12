@@ -2,13 +2,6 @@
 name: code-analyzer
 description: "Analyze codebase with parallel agents to produce .output/ documents"
 argument-hint: "[optional: path to codebase, default is the current directory]"
-allowed-tools:
-  - Read
-  - Bash
-  - Glob
-  - Grep
-  - Write
-  - Task
 ---
 
 ## 目标

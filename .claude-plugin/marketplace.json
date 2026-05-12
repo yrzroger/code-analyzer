@@ -1,28 +1,20 @@
 {
   "name": "code-analyzer",
-  "id": "code-analyzer",
+  "description": "Analyze codebase with parallel agents",
   "owner": {
     "name": "yrzroger"
   },
-  "metadata": {
-    "description": "Analyze codebase with parallel agents to produce .output/ documents",
-    "version": "1.0.0"
-  },
+
   "plugins": [
     {
       "name": "code-analyzer",
       "source": "./",
       "description": "Analyze codebase with parallel agents to produce .output/ documents",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "author": {
         "name": "yrzroger"
       },
-      "keywords": [
-        "code-analysis",
-        "architecture",
-        "documentation",
-        "codebase-mapping"
-      ],
+      "keywords": [ "code-analysis", "architecture", "documentation", "codebase-mapping" ],
       "category": "code-analysis"
     }
   ]

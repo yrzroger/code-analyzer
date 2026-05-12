@@ -1,17 +1,11 @@
 {
   "name": "code-analyzer",
   "description": "Analyze codebase with parallel agents to produce .output/ documents",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "yrzroger"
   },
   "repository": "https://github.com/yrzroger/code-analyzer",
   "license": "MIT",
-  "keywords": [
-    "code-analysis",
-    "architecture",
-    "documentation",
-    "codebase-mapping"
-  ],
-  "skills": ["./skills/code-analyzer"]
+  "keywords": [ "code-analysis", "architecture", "documentation", "codebase-mapping" ]
 }
