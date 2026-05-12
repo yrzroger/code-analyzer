@@ -3,11 +3,11 @@
   "description": "并行分析代码库的技术栈、架构、流程等，生成 10 个结构化文档到 .output/ 目录",
   "version": "1.0.0",
   "author": {
-    "name": "Roger Yu",
-    "email": "roger@example.com"
+    "name": "yrzroger",
+    "email": "yuruzhi@foxmail.com"
   },
-  "homepage": "https://github.com/yourname/code-analyzer",
-  "repository": "https://github.com/yourname/code-analyzer",
+  "homepage": "https://github.com/yrzroger/code-analyzer",
+  "repository": "https://github.com/yrzroger/code-analyzer",
   "license": "MIT",
   "keywords": [
     "code-analysis",

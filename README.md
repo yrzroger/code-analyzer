@@ -58,13 +58,7 @@ graph TD
 ## 安装
 
 ```bash
-claude plugin install ./code-analyzer-plugin
-```
-
-或复制到插件目录：
-
-```bash
-cp -r code-analyzer-plugin ~/.claude/plugins/cache/claude-plugins-official/code-analyzer/1.0.0
+claude plugin install ./code-analyzer
 ```
 
 ## 使用
