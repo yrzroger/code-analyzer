@@ -46,7 +46,7 @@ graph TD
     F --> G4[concerns-analyzer]
     F --> G5[deps-analyzer]
     F --> G6[flow-analyzer]
-    G1 --> H[验证 10 个文档]
+    G1 --> H[验证输出符合要求]
     G2 --> H
     G3 --> H
     G4 --> H
