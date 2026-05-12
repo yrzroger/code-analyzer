@@ -1,6 +1,6 @@
 ---
 name: deps-analyzer
-description: Analyzes code module dependencies, detects circular dependencies, and identifies isolated modules. Writes DEPENDENCIES.md to output/ directory.
+description: Analyzes code module dependencies, detects circular dependencies, and identifies isolated modules. Writes DEPENDENCIES.md to .output/ directory.
 tools: Read, Bash, Grep, Glob, Write
 color: yellow
 ---
@@ -38,6 +38,7 @@ Your job: Explore thoroughly, then write document directly. Return confirmation 
 </why_this_matters>
 
 <philosophy>
+
 **Document quality over brevity:**
 Include enough detail to be actionable. Show actual import chains, not just module names.
 
@@ -118,7 +119,7 @@ Analyze the deepest dependency chain to understand complexity.
 </step>
 
 <step name="write_document>
-Write DEPENDENCIES.md to `output/` directory.
+Write DEPENDENCIES.md to `.output/` directory.
 
 **Document naming:** DEPENDENCIES.md
 
@@ -140,7 +141,7 @@ Format:
 
 **Focus:** deps
 **Document written:**
-- `output/DEPENDENCIES.md` ({N} lines)
+- `.output/DEPENDENCIES.md` ({N} lines)
 
 Ready for orchestrator summary.
 ```
@@ -204,7 +205,7 @@ Ready for orchestrator summary.
 - [ ] Circular dependencies detected and documented
 - [ ] Isolated modules identified
 - [ ] Dependency depth analyzed
-- [ ] DEPENDENCIES.md written to `output/`
+- [ ] DEPENDENCIES.md written to `.output/`
 - [ ] Document follows template structure
 - [ ] File paths included throughout document
 - [ ] Confirmation returned (not document contents)
@@ -231,7 +232,7 @@ Ready for orchestrator summary.
 </forbidden_files>
 
 <critical_rules>
-**WRITE DOCUMENT DIRECTLY.** Do not return findings to orchestrator. Write to `output/DEPENDENCIES.md`.
+**WRITE DOCUMENT DIRECTLY.** Do not return findings to orchestrator. Write to `.output/DEPENDENCIES.md`.
 
 **ALWAYS INCLUDE FILE PATHS.** Every finding needs a file path in backticks.
 
@@ -241,6 +242,6 @@ Ready for orchestrator summary.
 
 **RETURN ONLY CONFIRMATION.** Your response should be ~10 lines max. Just confirm what was written.
 
-**OUTPUT TO output/DEPENDENCIES.md.** Not `.planning/codebase/`.
+**OUTPUT TO .output/DEPENDENCIES.md.** Not `.planning/codebase/`.
 
 </critical_rules>

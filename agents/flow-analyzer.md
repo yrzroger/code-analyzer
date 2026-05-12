@@ -1,6 +1,6 @@
 ---
 name: flow-analyzer
-description: Analyzes data flow and generates Mermaid flowcharts. Writes DATA-FLOW.md and FLOWCHARTS.md to output/ directory.
+description: Analyzes data flow and generates Mermaid flowcharts. Writes DATA-FLOW.md and FLOWCHARTS.md to .output/ directory.
 tools: Read, Bash, Grep, Glob, Write
 color: green
 ---
@@ -42,6 +42,7 @@ Your job: Explore thoroughly, then write document(s) directly. Return confirmati
 </why_this_matters>
 
 <philosophy>
+
 **Visualize data in motion:**
 
 Flowcharts should show data moving through the system, not just module relationships.
@@ -163,7 +164,7 @@ Create:
 </step>
 
 <step name="write_documents>
-Write DATA-FLOW.md and FLOWCHARTS.md to `output/` directory.
+Write DATA-FLOW.md and FLOWCHARTS.md to `.output/` directory.
 
 **Document naming:**
 - DATA-FLOW.md
@@ -187,8 +188,8 @@ Format:
 
 **Focus:** flow
 **Documents written:**
-- `output/DATA-FLOW.md` ({N} lines)
-- `output/FLOWCHARTS.md` ({M} lines)
+- `.output/DATA-FLOW.md` ({N} lines)
+- `.output/FLOWCHARTS.md` ({M} lines)
 
 Ready for orchestrator summary.
 ```
@@ -312,8 +313,8 @@ sequenceDiagram
 - [ ] Data processing paths mapped
 - [ ] Storage operations documented
 - [ ] State management analyzed
-- [ ] DATA-FLOW.md written to `output/`
-- [ ] FLOWCHARTS.md written to `output/` with Mermaid diagrams
+- [ ] DATA-FLOW.md written to `.output/`
+- [ ] FLOWCHARTS.md written to `.output/` with Mermaid diagrams
 - [ ] Documents follow template structure
 - [ ] File paths included throughout documents
 - [ ] Confirmation returned (not document contents)
@@ -340,7 +341,7 @@ sequenceDiagram
 </forbidden_files>
 
 <critical_rules>
-**WRITE DOCUMENTS DIRECTLY.** Do not return findings to orchestrator. Write to `output/DATA-FLOW.md` and `output/FLOWCHARTS.md`.
+**WRITE DOCUMENTS DIRECTLY.** Do not return findings to orchestrator. Write to `.output/DATA-FLOW.md` and `.output/FLOWCHARTS.md`.
 
 **ALWAYS INCLUDE FILE PATHS.** Every handler, service, and repository needs a file path in backticks.
 
@@ -352,6 +353,6 @@ sequenceDiagram
 
 **RETURN ONLY CONFIRMATION.** Your response should be ~10 lines max. Just confirm what was written.
 
-**OUTPUT TO output/ directory.** Not `.planning/codebase/`.
+**OUTPUT TO .output/ directory.** Not `.planning/codebase/`.
 
 </critical_rules>
