@@ -60,7 +60,7 @@ graph TD
 ## 安装
 
 ```bash
-/plugin marketplace add yrzroger/analyze-codebase
+/plugin marketplace add yrzroger/code-analyzer
 /plugin install ./analyze-codebase
 /reload-plugins
 ```
