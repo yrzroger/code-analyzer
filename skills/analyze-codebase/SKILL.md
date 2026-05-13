@@ -30,7 +30,7 @@ Output directory: {target}/.output/
 
 - 并行执行 6 个 analyze-codebase agent 实例
 - 每个 agent 接收参数: focus (专注领域) + templates (模板列表)
-- 使用统一的 agent 文件: `agents/analyze-codebase.md`
+- 使用统一的 agent 文件: `agents/code-analyzer.md`
 - 模板文件位于: `skills/analyze-codebase/assets/`
 
 

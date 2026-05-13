@@ -1,5 +1,5 @@
 ---
-name: analyze-codebase
+name: code-analyzer
 description: 通用代码分析器，根据focus参数执行特定领域的分析并生成对应文档
 tools: Read, Bash, Grep, Glob, Write
 color: cyan
