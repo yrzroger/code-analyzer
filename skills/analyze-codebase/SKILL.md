@@ -1,12 +1,12 @@
 ---
-name: code-analyzer
+name: analyze-codebase
 description: "Analyze codebase with parallel agents to produce .output/ documents"
 argument-hint: "[optional: path to codebase, default is the current directory]"
 ---
 
 ## 目标
 
-使用 6 个并行 code-analyzer agent 分析代码库，每个agent根据focus参数执行特定领域的分析，输出 10 个结构化文档到目标项目的 .output/ 目录。
+使用 6 个并行 analyze-codebase agent 分析代码库，每个agent根据focus参数执行特定领域的分析，输出 10 个结构化文档到目标项目的 .output/ 目录。
 
 **输出文档：**
 1. STACK.md - 技术栈
@@ -28,17 +28,17 @@ Output directory: {target}/.output/
 
 ## 架构设计
 
-- 并行执行 6 个 code-analyzer agent 实例
+- 并行执行 6 个 analyze-codebase agent 实例
 - 每个 agent 接收参数: focus (专注领域) + templates (模板列表)
-- 使用统一的 agent 文件: `agents/code-analyzer.md`
-- 模板文件位于: `skills/code-analyzer/assets/`
+- 使用统一的 agent 文件: `agents/analyze-codebase.md`
+- 模板文件位于: `skills/analyze-codebase/assets/`
 
 
 ## 处理流程
 
 1. 解析目标目录参数，默认当前目录
 2. 创建 {target}/.output/ 目录
-3. 并行启动 6 个 code-analyzer agent，每个传递不同参数:
+3. 并行启动 6 个 analyze-codebase agent，每个传递不同参数:
    - Agent 1: focus=tech, templates=[STACK.md, INTEGRATIONS.md]
    - Agent 2: focus=arch, templates=[ARCHITECTURE.md, STRUCTURE.md]
    - Agent 3: focus=quality, templates=[CONVENTIONS.md, TESTING.md]

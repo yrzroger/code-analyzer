@@ -1,6 +1,6 @@
-# Code Analyzer
+# Analyze Codebase
 
-Claude Code 插件，使用 6 个并行 agent 分析代码库，生成 10 个结构化文档。
+Claude Code 插件，使用并行 agent 分析代码库，生成 10 个结构化文档。
 
 ## 功能
 
@@ -36,7 +36,7 @@ Claude Code 插件，使用 6 个并行 agent 分析代码库，生成 10 个结
 
 ```mermaid
 graph TD
-    A[用户调用 /code-analyzer] --> B{是否指定目标目录?}
+    A[用户调用 /analyze-codebase] --> B{是否指定目标目录?}
     B -->|是| C[使用指定目录]
     B -->|否| D[使用当前目录]
     C --> E[创建 .output/ 目录]
@@ -60,8 +60,8 @@ graph TD
 ## 安装
 
 ```bash
-/plugin marketplace add yrzroger/code-analyzer
-/plugin install ./code-analyzer
+/plugin marketplace add yrzroger/analyze-codebase
+/plugin install ./analyze-codebase
 /reload-plugins
 ```
 
@@ -70,7 +70,7 @@ graph TD
 在任意项目目录下运行：
 
 ```
-/code-analyzer [可选：目标目录路径]
+/analyze-codebase [可选：目标目录路径]
 ```
 
 默认分析当前目录。

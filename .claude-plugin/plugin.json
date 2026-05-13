@@ -1,5 +1,5 @@
 {
-  "name": "code-analyzer",
+  "name": "analyze-codebase",
   "description": "Analyze codebase with parallel agents to produce .output/ documents",
   "version": "1.0.3",
   "author": {

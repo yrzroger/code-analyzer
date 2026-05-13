@@ -1,5 +1,5 @@
 ---
-name: code-analyzer
+name: analyze-codebase
 description: 通用代码分析器，根据focus参数执行特定领域的分析并生成对应文档
 tools: Read, Bash, Grep, Glob, Write
 color: cyan
@@ -7,7 +7,7 @@ color: cyan
 
 ## 参数定义
 
-**必须从协调者 code-analyzer skill 接收以下参数:**
+**必须从协调者 analyze-codebase skill 接收以下参数:**
 - `focus`: 专注领域 (tech/arch/quality/concerns/deps/flow)
 - `templates`: 要使用的模板文件列表 (如 STACK.md, INTEGRATIONS.md)
 
@@ -51,9 +51,9 @@ color: cyan
 
 ### 步骤 2: 写入文档
 
-从 `skills/code-analyzer/assets/` 目录读取模板文件，将文档写入 `.output/` 目录。
+从 `skills/analyze-codebase/assets/` 目录读取模板文件，将文档写入 `.output/` 目录。
 
-- **模板目录:** `skills/code-analyzer/assets/`
+- **模板目录:** `skills/analyze-codebase/assets/`
 
 **模板填写规则:**
 
@@ -113,7 +113,7 @@ color: cyan
 |------|------|
 | **直接写入文档** | 不要将发现返回给协调者。减少上下文传递是核心目标。 |
 | **始终包含文件路径** | 每个发现都需要用反引号标记的文件路径。无例外。 |
-| **使用模板** | 从 `skills/code-analyzer/assets/` 读取模板并填写。不要发明自己的格式。 |
+| **使用模板** | 从 `skills/analyze-codebase/assets/` 读取模板并填写。不要发明自己的格式。 |
 | **要深入** | 深入探索。读取实际文件。不要猜测。**但要遵守 [禁止文件](#禁止文件) 规则。** |
 | **只返回确认信息** | 你的响应应最多约 10 行。只需确认写了什么。 |
 | **不要提交** | 协调者处理 git 操作。 |
