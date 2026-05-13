@@ -6,7 +6,7 @@ argument-hint: "[optional: path to codebase, default is the current directory]"
 
 ## 目标
 
-使用 6 个并行 analyzer agent 分析代码库，输出 10 个结构化文档到目标项目的 .output/ 目录。
+使用 6 个并行 code-analyzer agent 分析代码库，每个agent根据focus参数执行特定领域的分析，输出 10 个结构化文档到目标项目的 .output/ 目录。
 
 **输出文档：**
 1. STACK.md - 技术栈
@@ -28,22 +28,23 @@ Output directory: {target}/.output/
 
 ## 架构设计
 
-- 并行执行 6 个 agent
-- 每个 agent 独立负责特定分析维度
-- 输出文档到目标项目的 .output/ 目录
+- 并行执行 6 个 code-analyzer agent 实例
+- 每个 agent 接收参数: focus (专注领域) + templates (模板列表)
+- 使用统一的 agent 文件: `agents/code-analyzer.md`
+- 模板文件位于: `skills/code-analyzer/assets/`
 
 
 ## 处理流程
 
-1. 解析目标目录参数，默认当前目录 
-2. 创建 {target}/.output/ 目录 
-3. 并行启动 6 个 analyzer agent:  
-   - Agent 1: tech-analyzer → STACK.md, INTEGRATIONS.md
-   - Agent 2: arch-analyzer → ARCHITECTURE.md, STRUCTURE.md
-   - Agent 3: quality-analyzer → CONVENTIONS.md, TESTING.md
-   - Agent 4: concerns-analyzer → CONCERNS.md
-   - Agent 5: deps-analyzer → DEPENDENCIES.md
-   - Agent 6: flow-analyzer → DATA-FLOW.md, FLOWCHARTS.md
+1. 解析目标目录参数，默认当前目录
+2. 创建 {target}/.output/ 目录
+3. 并行启动 6 个 code-analyzer agent，每个传递不同参数:
+   - Agent 1: focus=tech, templates=[STACK.md, INTEGRATIONS.md]
+   - Agent 2: focus=arch, templates=[ARCHITECTURE.md, STRUCTURE.md]
+   - Agent 3: focus=quality, templates=[CONVENTIONS.md, TESTING.md]
+   - Agent 4: focus=concerns, templates=[CONCERNS.md]
+   - Agent 5: focus=deps, templates=[DEPENDENCIES.md]
+   - Agent 6: focus=flow, templates=[DATA-FLOW.md, FLOWCHARTS.md]
 4. 等待所有 agent 完成
 5. 验证 10 个文档已生成
 6. 显示完成摘要
