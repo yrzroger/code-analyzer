@@ -1,5 +1,5 @@
 {
-  "name": "analyze-codebase",
+  "name": "code-analyzer",
   "description": "Analyze codebase with parallel agents",
   "owner": {
     "name": "yrzroger"
@@ -7,7 +7,7 @@
 
   "plugins": [
     {
-      "name": "analyze-codebase",
+      "name": "code-analyzer",
       "source": "./",
       "description": "Analyze codebase with parallel agents to produce .output/ documents",
       "version": "1.0.4",
