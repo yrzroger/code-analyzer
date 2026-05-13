@@ -1,7 +1,7 @@
 {
   "name": "code-analyzer",
   "description": "Analyze codebase with parallel agents to produce .output/ documents",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "yrzroger"
   },
