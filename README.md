@@ -61,7 +61,7 @@ graph TD
 
 ```bash
 /plugin marketplace add yrzroger/code-analyzer
-/plugin install ./analyze-codebase
+/plugin install code-analyzer@analyze-codebase
 /reload-plugins
 ```
 
