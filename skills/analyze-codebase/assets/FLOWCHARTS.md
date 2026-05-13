@@ -1,6 +1,6 @@
 # 流程图
 
-**Analysis Date:** [YYYY-MM-DD]
+**分析日期:** [YYYY-MM-DD]
 
 ## 请求处理流程
 
@@ -46,4 +46,4 @@ sequenceDiagram
 
 ---
 
-*Flowchart analysis: [date]*
+*流程图分析: [date]*

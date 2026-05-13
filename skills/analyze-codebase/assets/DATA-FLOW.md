@@ -1,6 +1,6 @@
 # 数据流分析
 
-**Analysis Date:** [YYYY-MM-DD]
+**分析日期:** [YYYY-MM-DD]
 
 ## 数据输入点
 
@@ -44,4 +44,4 @@
 
 ---
 
-*Data flow analysis: [date]*
+*数据流分析: [date]*

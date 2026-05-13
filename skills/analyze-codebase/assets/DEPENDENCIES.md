@@ -1,6 +1,6 @@
 # 代码依赖关系
 
-**Analysis Date:** [YYYY-MM-DD]
+**分析日期:** [YYYY-MM-DD]
 
 ## 模块依赖概览
 
@@ -8,10 +8,10 @@
 
 ## 核心模块依赖
 
-**[Module Name]:**
-- Location: `path/to/module`
-- Imports: [moduleA, moduleB]
-- Imported by: [moduleC, moduleD]
+**[模块名称]:**
+- 位置: `path/to/module`
+- 导入: [moduleA, moduleB]
+- 被导入: [moduleC, moduleD]
 
 ## 循环依赖
 
@@ -38,4 +38,4 @@
 
 ---
 
-*Dependency analysis: [date]*
+*依赖分析: [date]*
