@@ -28,7 +28,7 @@ Output directory: {target}/.output/
 
 ## 架构设计
 
-- 并行执行 6 个 code-analyzer agent 实例
+- 并行执行 6 个 analyze-codebase:code-analyzer agent 实例
 - 每个 agent 接收参数: focus (专注领域) + templates (模板列表)
 - 使用统一的 agent 文件: `agents/code-analyzer.md`
 - 模板文件位于: `skills/analyze-codebase/assets/`
@@ -38,7 +38,7 @@ Output directory: {target}/.output/
 
 1. 解析目标目录参数，默认当前目录
 2. 创建 {target}/.output/ 目录
-3. 并行启动 6 个 code-analyzer agent，每个传递不同参数:
+3. 并行启动 6 个 analyze-codebase:code-analyzer agent，每个传递不同参数:
    - Agent 1: focus=tech, templates=[STACK.md, INTEGRATIONS.md]
    - Agent 2: focus=arch, templates=[ARCHITECTURE.md, STRUCTURE.md]
    - Agent 3: focus=quality, templates=[CONVENTIONS.md, TESTING.md]

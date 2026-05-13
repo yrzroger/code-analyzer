@@ -10,7 +10,7 @@
       "name": "analyze-codebase",
       "source": "./",
       "description": "Analyze codebase with parallel agents to produce .output/ documents",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "author": {
         "name": "yrzroger"
       },
