@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>架构分析 - 代码库分析</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f1f5f9;color:#1e293b;line-height:1.6}
+header{background:linear-gradient(135deg,#1e293b 0%,#0f172a 100%);color:white;padding:2rem}
+header h1{font-size:1.875rem;font-weight:700;margin-bottom:.5rem}
+.meta{color:#94a3b8;font-size:.875rem;margin-bottom:1.25rem}
+nav{display:flex;flex-wrap:wrap;gap:.5rem}
+nav a{background:rgba(255,255,255,.1);color:#cbd5e1;padding:.25rem .75rem;border-radius:9999px;font-size:.8125rem;text-decoration:none}
+nav a:hover{background:rgba(255,255,255,.2);color:white}
+main{max-width:1100px;margin:2rem auto;padding:0 1.5rem;display:flex;flex-direction:column;gap:1.5rem}
+section{background:#fff;border-radius:.75rem;box-shadow:0 1px 3px rgba(0,0,0,.08);border:1px solid #e2e8f0;overflow:hidden}
+.section-header{background:#f8fafc;border-bottom:1px solid #e2e8f0;padding:1rem 1.5rem}
+.section-header h2{font-size:1.0625rem;font-weight:600}
+.section-body{padding:1.5rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem}
+.card{background:#f8fafc;border:1px solid #e2e8f0;border-radius:.5rem;padding:1rem}
+.card h3{font-size:.9375rem;font-weight:600;color:#2563eb;margin-bottom:.625rem}
+code{background:#eff6ff;color:#1d4ed8;padding:.15rem .4rem;border-radius:.25rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:.875em}
+pre{background:#1e293b;color:#e2e8f0;padding:1rem 1.25rem;border-radius:.5rem;font-family:'Menlo','Monaco','Consolas',monospace;font-size:.8125rem;overflow-x:auto;line-height:1.6}
+pre code{background:none;color:inherit;padding:0}
+ul,ol{padding-left:1.5rem}
+li{margin-bottom:.25rem}
+.item{border-left:3px solid #2563eb;padding-left:1rem;margin-bottom:1.25rem}
+.item-title{font-weight:600;margin-bottom:.5rem}
+.kv{display:flex;gap:.5rem;align-items:baseline;margin-bottom:.375rem;font-size:.9375rem}
+.key{color:#64748b;min-width:80px;font-size:.875rem;flex-shrink:0}
+.steps{counter-reset:step}
+.step{counter-increment:step;display:flex;gap:.75rem;margin-bottom:.75rem}
+.step::before{content:counter(step);background:#2563eb;color:white;border-radius:50%;width:1.5rem;height:1.5rem;display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0;margin-top:.1rem}
+footer{text-align:center;padding:1.5rem;color:#94a3b8;font-size:.875rem;margin-top:1rem}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏗 架构</h1>
+  <div class="meta">分析日期: [YYYY-MM-DD]</div>
+  <nav>
+    <a href="#pattern">架构模式</a>
+    <a href="#layers">层级</a>
+    <a href="#dataflow">数据流</a>
+    <a href="#abstractions">关键抽象</a>
+    <a href="#entrypoints">入口点</a>
+    <a href="#errors">错误处理</a>
+    <a href="#crosscutting">横切关注点</a>
+  </nav>
+</header>
+<main>
+
+  <section id="pattern">
+    <div class="section-header"><h2>架构模式概览</h2></div>
+    <div class="section-body">
+      <div class="card">
+        <h3>总体架构</h3>
+        <p><strong>[Pattern name]</strong></p>
+        <br>
+        <h3 style="margin-top:.5rem">关键特性</h3>
+        <ul>
+          <li>[特性 1]</li>
+          <li>[特性 2]</li>
+          <li>[特性 3]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="layers">
+    <div class="section-header"><h2>层级</h2></div>
+    <div class="section-body">
+      <div class="grid">
+        <div class="card">
+          <h3>[层级名称]</h3>
+          <div class="kv"><span class="key">用途</span><span>[该层的作用]</span></div>
+          <div class="kv"><span class="key">位置</span><span><code>[path]</code></span></div>
+          <div class="kv"><span class="key">包含</span><span>[代码类型]</span></div>
+          <div class="kv"><span class="key">依赖</span><span>[使用的模块]</span></div>
+          <div class="kv"><span class="key">被依赖</span><span>[使用它的模块]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="dataflow">
+    <div class="section-header"><h2>数据流</h2></div>
+    <div class="section-body">
+      <div class="card">
+        <h3>[流程名称]</h3>
+        <div class="steps">
+          <div class="step">[步骤 1]</div>
+          <div class="step">[步骤 2]</div>
+          <div class="step">[步骤 3]</div>
+        </div>
+        <br>
+        <div class="kv"><span class="key">状态管理</span><span>[状态处理方式]</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="abstractions">
+    <div class="section-header"><h2>关键抽象</h2></div>
+    <div class="section-body">
+      <div class="grid">
+        <div class="card">
+          <h3>[抽象名称]</h3>
+          <div class="kv"><span class="key">用途</span><span>[表示什么]</span></div>
+          <div class="kv"><span class="key">示例</span><span><code>[file paths]</code></span></div>
+          <div class="kv"><span class="key">模式</span><span>[使用的模式]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="entrypoints">
+    <div class="section-header"><h2>入口点</h2></div>
+    <div class="section-body">
+      <div class="grid">
+        <div class="card">
+          <h3>[入口点]</h3>
+          <div class="kv"><span class="key">位置</span><span><code>[path]</code></span></div>
+          <div class="kv"><span class="key">触发</span><span>[什么调用它]</span></div>
+          <div class="kv"><span class="key">职责</span><span>[它做什么]</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="errors">
+    <div class="section-header"><h2>错误处理</h2></div>
+    <div class="section-body">
+      <div class="card">
+        <h3>策略</h3>
+        <p>[方式]</p>
+        <br>
+        <h3>模式</h3>
+        <ul>
+          <li>[模式 1]</li>
+          <li>[模式 2]</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="crosscutting">
+    <div class="section-header"><h2>横切关注点</h2></div>
+    <div class="section-body">
+      <div class="grid">
+        <div class="card">
+          <h3>日志</h3>
+          <p>[方式]</p>
+        </div>
+        <div class="card">
+          <h3>验证</h3>
+          <p>[方式]</p>
+        </div>
+        <div class="card">
+          <h3>认证</h3>
+          <p>[方式]</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer>架构分析: [date]</footer>
+</body>
+</html>
