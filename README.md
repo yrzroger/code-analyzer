@@ -1,36 +1,36 @@
 # Analyze Codebase
 
-Claude Code 插件，使用并行 agent 分析代码库，生成 10 个独立 HTML 报告。
+Claude Code 插件，使用并行 agent 分析代码库，生成 10 个结构化文档。
 
 ## 功能
 
-自动分析目标代码库，输出以下 HTML 文档到 `.output/` 目录，可直接在浏览器中打开阅读：
+自动分析目标代码库，输出以下文档到 `.output/` 目录：
 
 | # | 文档 | 说明 |
 |:--:|------|------|
-| 1 | **STACK.html** | 技术栈（语言、框架、依赖） |
-| 2 | **INTEGRATIONS.html** | 外部集成（API、数据库、服务） |
-| 3 | **ARCHITECTURE.html** | 架构模式 |
-| 4 | **STRUCTURE.html** | 代码结构 |
-| 5 | **CONVENTIONS.html** | 编码规范 |
-| 6 | **TESTING.html** | 测试模式 |
-| 7 | **CONCERNS.html** | 问题与风险（含严重程度徽章） |
-| 8 | **DEPENDENCIES.html** | 代码依赖 |
-| 9 | **DATA-FLOW.html** | 数据流 |
-| 10 | **FLOWCHARTS.html** | 流程图（Mermaid 交互式渲染） |
+| 1 | **STACK.md** | 技术栈（语言、框架、依赖） |
+| 2 | **INTEGRATIONS.md** | 外部集成（API、数据库、服务） |
+| 3 | **ARCHITECTURE.md** | 架构模式 |
+| 4 | **STRUCTURE.md** | 代码结构 |
+| 5 | **CONVENTIONS.md** | 编码规范 |
+| 6 | **TESTING.md** | 测试模式 |
+| 7 | **CONCERNS.md** | 问题与风险 |
+| 8 | **DEPENDENCIES.md** | 代码依赖 |
+| 9 | **DATA-FLOW.md** | 数据流 |
+| 10 | **FLOWCHARTS.md** | 流程图 (Mermaid) |
 
 ## Agent 组件
 
-项目使用单一 Agent 文件 `agents/code-analyzer.md`，通过 `focus` 参数区分 6 个分析领域：
+项目包含 6 个分析 Agent，每个 Agent 由 Markdown 文件定义：
 
-| focus | 功能 | 输出文档 |
-|-------|------|----------|
-| `tech` | 技术栈和集成 | STACK.html, INTEGRATIONS.html |
-| `arch` | 架构和结构 | ARCHITECTURE.html, STRUCTURE.html |
-| `quality` | 代码质量和测试 | CONVENTIONS.html, TESTING.html |
-| `concerns` | 问题与风险 | CONCERNS.html |
-| `deps` | 依赖分析 | DEPENDENCIES.html |
-| `flow` | 数据流和流程图 | DATA-FLOW.html, FLOWCHARTS.html |
+| Agent | 文件 | 功能 | 输出文档 |
+|-------|------|------|----------|
+| tech-analyzer | `agents/tech-analyzer.md` | 技术栈和集成 | STACK.md, INTEGRATIONS.md |
+| arch-analyzer | `agents/arch-analyzer.md` | 架构和结构 | ARCHITECTURE.md, STRUCTURE.md |
+| quality-analyzer | `agents/quality-analyzer.md` | 代码质量和测试 | CONVENTIONS.md, TESTING.md |
+| concerns-analyzer | `agents/concerns-analyzer.md` | 问题与风险 | CONCERNS.md |
+| deps-analyzer | `agents/deps-analyzer.md` | 依赖分析| DEPENDENCIES.md |
+| flow-analyzer | `agents/flow-analyzer.md` | 数据流和流程图 | DATA-FLOW.md, FLOWCHARTS.md |
 
 ## 分析流程
 

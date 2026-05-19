@@ -9,16 +9,16 @@ argument-hint: "[optional: path to codebase, default is the current directory]"
 使用 6 个并行 code-analyzer agent 分析代码库，每个agent根据focus参数执行特定领域的分析，输出 10 个结构化文档到目标项目的 .output/ 目录。
 
 **输出文档：**
-1. STACK.html - 技术栈
-2. INTEGRATIONS.html - 外部集成
-3. ARCHITECTURE.html - 架构模式
-4. STRUCTURE.html - 代码结构
-5. CONVENTIONS.html - 编码规范
-6. TESTING.html - 测试模式
-7. CONCERNS.html - 问题与风险
-8. DEPENDENCIES.html - 代码依赖
-9. DATA-FLOW.html - 数据流
-10. FLOWCHARTS.html - 流程图 (Mermaid + 交互式)
+1. STACK.md - 技术栈
+2. INTEGRATIONS.md - 外部集成
+3. ARCHITECTURE.md - 架构模式
+4. STRUCTURE.md - 代码结构
+5. CONVENTIONS.md - 编码规范
+6. TESTING.md - 测试模式
+7. CONCERNS.md - 问题与风险
+8. DEPENDENCIES.md - 代码依赖
+9. DATA-FLOW.md - 数据流
+10. FLOWCHARTS.md - 流程图 (Mermaid)
 
 
 ## 前置条件
@@ -39,12 +39,12 @@ Output directory: {target}/.output/
 1. 解析目标目录参数，默认当前目录
 2. 创建 {target}/.output/ 目录
 3. 并行启动 6 个 analyze-codebase:code-analyzer agent，每个传递不同参数:
-   - Agent 1: focus=tech, templates=[STACK.html, INTEGRATIONS.html]
-   - Agent 2: focus=arch, templates=[ARCHITECTURE.html, STRUCTURE.html]
-   - Agent 3: focus=quality, templates=[CONVENTIONS.html, TESTING.html]
-   - Agent 4: focus=concerns, templates=[CONCERNS.html]
-   - Agent 5: focus=deps, templates=[DEPENDENCIES.html]
-   - Agent 6: focus=flow, templates=[DATA-FLOW.html, FLOWCHARTS.html]
+   - Agent 1: focus=tech, templates=[STACK.md, INTEGRATIONS.md]
+   - Agent 2: focus=arch, templates=[ARCHITECTURE.md, STRUCTURE.md]
+   - Agent 3: focus=quality, templates=[CONVENTIONS.md, TESTING.md]
+   - Agent 4: focus=concerns, templates=[CONCERNS.md]
+   - Agent 5: focus=deps, templates=[DEPENDENCIES.md]
+   - Agent 6: focus=flow, templates=[DATA-FLOW.md, FLOWCHARTS.md]
 4. 等待所有 agent 完成
 5. 验证 10 个文档已生成
 6. 显示完成摘要

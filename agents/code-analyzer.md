@@ -9,7 +9,7 @@ color: cyan
 
 **必须从协调者 analyze-codebase skill 接收以下参数:**
 - `focus`: 专注领域 (tech/arch/quality/concerns/deps/flow)
-- `templates`: 要使用的模板文件列表 (如 STACK.html, INTEGRATIONS.html)
+- `templates`: 要使用的模板文件列表 (如 STACK.md, INTEGRATIONS.md)
 
 ---
 
@@ -131,22 +131,22 @@ color: cyan
 **专注领域:** **tech**
 - 分析技术栈（编程语言、框架、依赖）
 - 识别外部集成（API、数据库、服务）
-- 生成 STACK.html 和 INTEGRATIONS.html
+- 生成 STACK.md 和 INTEGRATIONS.md
 
 **为什么重要:**
 
 | 文档 | 用途 |
 |------|------|
-| **STACK.html** | 展示使用的技术，用于正确设置开发环境、理解构建和部署要求、了解需要安装哪些包 |
-| **INTEGRATIONS.html** | 展示外部服务，用于配置环境变量、理解系统间的数据流、如需设置本地模拟服务 |
+| **STACK.md** | 展示使用的技术，用于正确设置开发环境、理解构建和部署要求、了解需要安装哪些包 |
+| **INTEGRATIONS.md** | 展示外部服务，用于配置环境变量、理解系统间的数据流、如需设置本地模拟服务 |
 
 **输出意义:**
 - 依赖项很关键 — 列出准确的包名和版本
 - 集成需要详细信息 — 服务名称、所需环境变量、SDK 包
 - 版本信息很重要 — 具体版本可实现可重现的环境
-- STACK.html 指导设置 — 新开发者需要知道要安装什么
+- STACK.md 指导设置 — 新开发者需要知道要安装什么
 
-**生成文档:** `STACK.html`, `INTEGRATIONS.html`
+**生成文档:** `STACK.md`, `INTEGRATIONS.md`
 
 **探索命令:**
 ```bash
@@ -164,8 +164,8 @@ grep -r "import.*stripe\|import.*supabase\|import.*aws\|import.*@" src/ --includ
 
 **tech 特有检查项:**
 
-- [ ] STACK.html 已写入 `.output/`
-- [ ] INTEGRATIONS.html 已写入 `.output/`
+- [ ] STACK.md 已写入 `.output/`
+- [ ] INTEGRATIONS.md 已写入 `.output/`
 
 ---
 
@@ -176,22 +176,22 @@ grep -r "import.*stripe\|import.*supabase\|import.*aws\|import.*@" src/ --includ
 **专注领域:** **arch**
 - 分析架构模式和层级
 - 记录代码库结构和组织
-- 生成 ARCHITECTURE.html 和 STRUCTURE.html
+- 生成 ARCHITECTURE.md 和 STRUCTURE.md
 
 **为什么重要:**
 
 | 文档 | 用途 |
 |------|------|
-| **ARCHITECTURE.html** | 展示代码如何组织，用于理解架构方式（MVC、分层、微服务等）、了解层级和依赖、识别入口点 |
-| **STRUCTURE.html** | 展示代码在哪里，用于知道在哪里放置新文件、理解命名规范、找到现有代码 |
+| **ARCHITECTURE.md** | 展示代码如何组织，用于理解架构方式（MVC、分层、微服务等）、了解层级和依赖、识别入口点 |
+| **STRUCTURE.md** | 展示代码在哪里，用于知道在哪里放置新文件、理解命名规范、找到现有代码 |
 
 **输出意义:**
 - 架构模式很重要 — 记录架构方式
-- STRUCTURE.html 回答"我该把代码放哪里?" — 包含添加新代码的指导
+- STRUCTURE.md 回答"我该把代码放哪里?" — 包含添加新代码的指导
 - 层级和依赖 — 展示代码如何组织
 - 入口点很关键 — 记录应用从哪里开始
 
-**生成文档:** `ARCHITECTURE.html`, `STRUCTURE.html`
+**生成文档:** `ARCHITECTURE.md`, `STRUCTURE.md`
 
 **探索命令:**
 ```bash
@@ -207,8 +207,8 @@ grep -r "^import" src/ --include="*.ts" --include="*.tsx" 2>/dev/null | head -10
 
 **arch 特有检查项:**
 
-- [ ] ARCHITECTURE.html 已写入 `.output/`
-- [ ] STRUCTURE.html 已写入 `.output/`
+- [ ] ARCHITECTURE.md 已写入 `.output/`
+- [ ] STRUCTURE.md 已写入 `.output/`
 
 ---
 
@@ -219,21 +219,21 @@ grep -r "^import" src/ --include="*.ts" --include="*.tsx" 2>/dev/null | head -10
 **专注领域:** **quality**
 - 分析代码规范和风格指南
 - 记录测试模式和框架
-- 生成 CONVENTIONS.html 和 TESTING.html
+- 生成 CONVENTIONS.md 和 TESTING.md
 
 **为什么重要:**
 
 | 文档 | 用途 |
 |------|------|
-| **CONVENTIONS.html** | 展示编码标准，用于编写符合现有风格的代码、理解命名模式、遵循 linting 规则 |
-| **TESTING.html** | 展示测试模式，用于编写符合现有模式的测试、理解测试结构、知道要 mock 什么 |
+| **CONVENTIONS.md** | 展示编码标准，用于编写符合现有风格的代码、理解命名模式、遵循 linting 规则 |
+| **TESTING.md** | 展示测试模式，用于编写符合现有模式的测试、理解测试结构、知道要 mock 什么 |
 
 **输出意义:**
 - 命名模式很重要 — 记录文件、函数和变量的命名方式
 - 测试模式帮助执行 — 展示测试如何结构化
 - 风格指南确保一致性 — 记录 linting 和格式化规则
 
-**生成文档:** `CONVENTIONS.html`, `TESTING.html`
+**生成文档:** `CONVENTIONS.md`, `TESTING.md`
 
 **探索命令:**
 ```bash
@@ -251,8 +251,8 @@ ls src/**/*.ts 2>/dev/null | head -10
 
 **quality 特有检查项:**
 
-- [ ] CONVENTIONS.html 已写入 `.output/`
-- [ ] TESTING.html 已写入 `.output/`
+- [ ] CONVENTIONS.md 已写入 `.output/`
+- [ ] TESTING.md 已写入 `.output/`
 
 ---
 
@@ -264,20 +264,20 @@ ls src/**/*.ts 2>/dev/null | head -10
 - 识别技术债务
 - 发现已知缺陷和脆弱区域
 - 记录安全和性能问题
-- 生成 CONCERNS.html
+- 生成 CONCERNS.md
 
 **为什么重要:**
 
 | 文档 | 用途 |
 |------|------|
-| **CONCERNS.html** | 展示问题和风险，用于避免引入更多技术债务、理解脆弱区域、了解安全风险 |
+| **CONCERNS.md** | 展示问题和风险，用于避免引入更多技术债务、理解脆弱区域、了解安全风险 |
 
 **输出意义:**
 - 要可操作性 — 不要只说"有债务"，要解释什么会出问题以及如何修复
 - 按影响排序 — 关注造成实际问题的问题
 - 安全很重要 — 清楚地识别安全风险
 
-**生成文档:** `CONCERNS.html`
+**生成文档:** `CONCERNS.md`
 
 **探索命令:**
 ```bash
@@ -293,7 +293,7 @@ grep -rn "return null\|return \[\]\|return {}" src/ --include="*.ts" --include="
 
 **concerns 特有检查项:**
 
-- [ ] CONCERNS.html 已写入 `.output/`
+- [ ] CONCERNS.md 已写入 `.output/`
 
 ---
 
@@ -306,7 +306,7 @@ grep -rn "return null\|return \[\]\|return {}" src/ --include="*.ts" --include="
 - 检测循环依赖
 - 识别孤立模块
 - 分析依赖深度
-- 生成 DEPENDENCIES.html
+- 生成 DEPENDENCIES.md
 
 **为什么重要:**
 
@@ -324,7 +324,7 @@ grep -rn "return null\|return \[\]\|return {}" src/ --include="*.ts" --include="
 
 **依赖方向:** `A imports B` 表示 A 依赖 B。一致地使用箭头: `A → B` 表示 A 导入 B。
 
-**生成文档:** `DEPENDENCIES.html`
+**生成文档:** `DEPENDENCIES.md`
 
 **探索命令:**
 ```bash
@@ -357,14 +357,14 @@ find . -name "index.ts" -o -name "index.js" -o -name "__init__.py" 2>/dev/null |
 - 记录存储操作
 - 分析状态管理
 - 生成 Mermaid 流程图
-- 生成 DATA-FLOW.html 和 FLOWCHARTS.html
+- 生成 DATA-FLOW.md 和 FLOWCHARTS.md
 
 **为什么重要:**
 
 | 文档 | 用途 |
 |------|------|
-| **DATA-FLOW.html** | 展示数据如何在系统中流动：数据从哪里进入（API、CLI、事件）、数据如何处理、数据存储在哪里、状态如何管理 |
-| **FLOWCHARTS.html** | 使用 Mermaid 图表可视化关键流程：请求处理流程、认证流程、业务流程 |
+| **DATA-FLOW.md** | 展示数据如何在系统中流动：数据从哪里进入（API、CLI、事件）、数据如何处理、数据存储在哪里、状态如何管理 |
+| **FLOWCHARTS.md** | 使用 Mermaid 图表可视化关键流程：请求处理流程、认证流程、业务流程 |
 
 **输出意义:**
 - 数据流清晰度很关键 — 准确展示数据从入口到出口的流动方式
@@ -376,7 +376,7 @@ find . -name "index.ts" -o -name "index.js" -o -name "__init__.py" 2>/dev/null |
 - 使用 `sequenceDiagram` 表示时间顺序的交互
 - 使用 `classDiagram` 表示类型关系
 
-**生成文档:** `DATA-FLOW.html`, `FLOWCHARTS.html`
+**生成文档:** `DATA-FLOW.md`, `FLOWCHARTS.md`
 
 **探索命令:**
 ```bash
@@ -396,7 +396,7 @@ grep -rn "transform\|process\|handle\|validate\|parse\|serialize" . --include="*
 - [ ] 数据处理路径已映射
 - [ ] 存储操作已记录
 - [ ] 状态管理已分析
-- [ ] FLOWCHARTS.html 包含 Mermaid 图表
+- [ ] FLOWCHARTS.md 包含 Mermaid 图表
 
 ---
 
